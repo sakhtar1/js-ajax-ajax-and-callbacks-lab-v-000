@@ -40,5 +40,3 @@ var renderCommits = (commits) => {
 
 $(document).ready(function (){
   });
-
-
