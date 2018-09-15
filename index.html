@@ -28,14 +28,13 @@
         <a href="#" onclick="searchRepositories()">Search Repositories</a>
         <div id="results">
           <ul>
-     {{#each this}}
        <li>
          <h2><a href="{{html_url}}">{{name}}</a></h2>
          <p>Repository Name: {{watchers_count}}</p>
-         <p>Description: {{forks_count}}</p>
-         <p>Owner Login: {{open_issues_count}}</p>
-         <p>Owner avatar: {{open_issues_count}}</p>
-         <p> Owner's Profile Link: {{ }}</p>
+         <p>Description: {{description}}</p>
+         <p>Owner Login: {{login}}</p>
+         <p>Owner avatar: {{avatar_url}}</p>
+         <p> Owner's Profile Link: {{url}}</p>
        </li>
       {{/each}}
     </ul>
