@@ -1,7 +1,4 @@
-$(document).ready(function (){
-  });
 
-  
 var displayError = () => $('#errors').html("I'm sorry, there's been an error. Please try again.")
 
 
@@ -22,7 +19,7 @@ var renderSearchResults = (results) => {
     '<p>${result.description}</p>'
     '</div>'
   });
-  return resultList 
+  return resultList
 };
 
 
@@ -39,4 +36,9 @@ var renderCommits = (commits) => {
   const commitList = `<ul>${commits.map(commit => '<li>' + commit.sha + commit.commit.message + '</li>').join('')}</ul>`
   return commitList
 }
-  
+
+
+$(document).ready(function (){
+  });
+
+
