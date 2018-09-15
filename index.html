@@ -22,27 +22,20 @@
     <main id="main">
       <div id="errors"></div>
     </main>
+    <div id="searchTerms">
+      <form onsubmit="searchRepositories(); return false;">
+        <input type="text" id="searchTerms"><br>
+        <a href="#">Search</a>
+      </form>
+    </div>
     <div class="flexbox-container">
       <div>
         <h3>Repositories</h3>
-        <a href="#" onclick="searchRepositories()">Search Repositories</a>
         <div id="results">
-          <ul>
-       <li>
-         <h2><a href="{{html_url}}">{{name}}</a></h2>
-         <p>Repository Name: {{watchers_count}}</p>
-         <p>Description: {{description}}</p>
-         <p>Owner Login: {{login}}</p>
-         <p>Owner avatar: {{avatar_url}}</p>
-         <p> Owner's Profile Link: {{url}}</p>
-       </li>
-      {{/each}}
-    </ul>
         </div>
       </div>
       <div>
         <h3>Details</h3>
-        <a href="#" onclick="showCommits()">Show Commits</a>
         <div id="details"></div>
       </div>
     </div>
