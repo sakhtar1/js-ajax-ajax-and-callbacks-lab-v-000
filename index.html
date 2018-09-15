@@ -25,10 +25,25 @@
     <div class="flexbox-container">
       <div>
         <h3>Repositories</h3>
-        <div id="results"></div>
+        <a href="#" onclick="searchRepositories()">Search Repositories</a>
+        <div id="results">
+          <ul>
+     {{#each this}}
+       <li>
+         <h2><a href="{{html_url}}">{{name}}</a></h2>
+         <p>Repository Name: {{watchers_count}}</p>
+         <p>Description: {{forks_count}}</p>
+         <p>Owner Login: {{open_issues_count}}</p>
+         <p>Owner avatar: {{open_issues_count}}</p>
+         <p> Owner's Profile Link: {{ }}</p>
+       </li>
+      {{/each}}
+    </ul>
+        </div>
       </div>
       <div>
         <h3>Details</h3>
+        <a href="#" onclick="showCommits()">Show Commits</a>
         <div id="details"></div>
       </div>
     </div>
