@@ -1,10 +1,16 @@
 $(document).ready(function (){
-    function showRepositories(event, data) {
+    function searchRepositories(event, data) {
     const repos = JSON.parse(this.responseText);
     const src = document.getElementById('repository-template').innerHTML;
     const template = Handlebars.compile(src);
     const repoList = template(repos);
     document.getElementById('repositories').innerHTML = repoList;
+  }
+
+    function showCommits() {
+      const commits = JSON.parse(this.responseText)
+      const commitsList = `<ul>${commits.map(commit => '<li><strong>' + commit.sha + commit.author.name + '</strong> - ' + commit.author.login + commit.author.avatar_url + '</li>').join('')}</ul>`
+      document.getElementById("commits").innerHTML = commitsList
   }
 
 
